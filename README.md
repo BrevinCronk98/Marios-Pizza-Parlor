@@ -1,37 +1,39 @@
 # Pizza Parlor
 
-#### This program gives you the ability to order a pizza
+#### This program gives you the ability to order a pizza.
 
-#### By _**{List of contributors}**_
+#### By Brevin Cronk
 
 ## Description
-
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+On this website you are able to order a pizza. Depending on the size and toppings on your pizza the price will vary.
 
 ## Setup/Installation Requirements
-
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+ You can clone my repository and open the website for yourself or you can go to my GH-pages:
 
 ## Known Bugs
-
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+The site is not fully functional yet, but the backend is working.
 
 ## Support and contact details
+If you experience any problems orr have criticism email me cronkbrevin98@gmail.com
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+## Specificatiopns
 
+#### Chose Toppings
+* Exapmple Input: Pepperoni
+* Example Output: The price will increase by 2
+#### Chose Size
+* Example Input: 12 inch
+* Example Output : the base price is 12 dollarrs before toppings.
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+HTML
+JavaScript
+JQuery
+CSS
+Bootstrap
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+MIT
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2020 Brevin Cronk
