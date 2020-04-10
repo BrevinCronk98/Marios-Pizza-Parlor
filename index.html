@@ -16,32 +16,42 @@
         <div class="row1">
             <div class="col-md-6">
                 <div id="size-buttons">
-                    <label for="size-btn">12 Inch</label>
-                    <input type="radio" id="size1">
-                    <br>
-                    <label for="size-btn"> 18 Inch</label>
-                    <input type="radio" id="size2">
+                    <select name="size" id="size">
+                        <option value="12Inch">12 Inch</option>
+                        <option value="18Inch">18 Inch</option>
+                    </select>
+                    
                 </div>
             </div>
         </div>
-    
-        <form action="submit" id="topping-form">
         <div class="row2">
             <div class="col-md-6">
                 <div id="top-buttons">
-                    <label for="topping-input">Pepperoni</label>
-                    <input type="radio" id="top1">
-                    <br>
-                    <label for="toppin-input">Bacon</label>
-                    <input type="radio" id=top2>
-                    <br>
-                    <label for="input-top">Sausage</label>
-                    <input type="radio" id="top3">
+                   <select name="toppings" id="toppings">
+                       <option value="Pepperoni">Pepperoni</option>
+                       <option value="Bacon">Bacon</option>
+                       <option value="Chicken">Chicken</option>
+                   </select>
                 </div>
             </div>   
-        </div>  
+        </div> 
     </div>
-    </form>
+        <br>
+        <div class="container">
+            <div class="row3">
+                <div class="col-md-4">
+                    <div id="buttonAdd">
+                        <button id="add-btn"> Order </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        
+   
+   
+    
+   
     
 </body>
 </html>
