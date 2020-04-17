@@ -1,6 +1,72 @@
-#topping-form{
-    display: ;
+#jumbo {
+    background-color: darksalmon;
+    margin-top: 50px;
+    border-radius: 25px;
 }
-#display-div{
+
+#display-div {
     display: none;
+}
+
+#slogan {
+font-family: monospace;
+font-size: 25px;
+}
+ 
+#title {
+    font-family: monospace;
+    font-size: 75px;
+}
+
+
+#pic {
+    height: 200px;
+    width: 650px;
+    float: right;
+    border-radius: 18px;
+}
+
+#small {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#large {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#size {
+    background-color: blanchedalmond;
+    font-family: monospace;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight:bold;
+}
+
+#pep {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#bac{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#chk {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#toppings {
+    background-color: blanchedalmond;
+    font-family: monospace;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight:bold;
+}
+
+body{
+    background-color: brown;
 }
