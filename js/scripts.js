@@ -7,7 +7,7 @@ function Pizza(toppings,size, total) {
 
 Pizza.prototype.addSizePrice = function(){
     this.sizePrice = 0;
-    if(this.size === "12Inch"){
+    if(this.size === "12 Inch"){
         return this.sizePrice = 12
     } else{
         return this.sizePrice = 15
@@ -43,9 +43,9 @@ $(document).ready(function(){
         pizza.addSizePrice();
         pizza.addToppingPrice();
         pizza.findTotal()
-        console.log(pizza.total)
-        console.log(pizza.toppingsPrice)
-        console.log(pizza.sizePrice)
+        $("#display-div").show();
+        $("#pizza-disp").text(pizza.toppings  + ' ' + pizza.size)
+        $("#total-disp").text(pizza.total + ' ' + "dollars")
     })
 })
 
