@@ -43,6 +43,7 @@ $(document).ready(function(){
         pizza.addSizePrice();
         pizza.addToppingPrice();
         pizza.findTotal()
+        // $("#add-btn").hide();
         $("#display-div").show();
         $("#pizza-disp").text(pizza.toppings  + ' ' + pizza.size)
         $("#total-disp").text(pizza.total + ' ' + "dollars")
