@@ -1,6 +1,6 @@
 # Pizza Parlor
 
-#### This program gives you the ability to order a pizza.
+#### This program gives you the ability to order a pizza with 2 size options and 3 topping choices.
 
 #### By Brevin Cronk
 
@@ -8,13 +8,13 @@
 On this website you are able to order a pizza. Depending on the size and toppings on your pizza the price will vary.
 
 ## Setup/Installation Requirements
- You can clone my repository and open the website for yourself or you can go to my GH-pages:
+ You can clone my repository and open the website for yourself or you can go to my GH-pages: https://brevincronk98.github.io/Marios-Pizza-Parlor/.
 
 ## Known Bugs
-The site is not fully functional yet, but the backend is working.
+The site has no know bugs.
 
 ## Support and contact details
-If you experience any problems orr have criticism email me cronkbrevin98@gmail.com
+If you experience any problems or have criticism email me cronkbrevin98@gmail.com
 
 ## Specificatiopns
 
