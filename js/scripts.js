@@ -47,6 +47,15 @@ $(document).ready(function(){
         $("#display-div").show();
         $("#pizza-disp").text(pizza.toppings  + ' ' + pizza.size)
         $("#total-disp").text(pizza.total + ' ' + "dollars")
+        $(".row1").hide();
+        $(".row2").hide();
+    });
+
+    $("#reset").click(function(event){
+        event.preventDefault();
+        $("#display-div").hide()
+        $(".row1").show();
+        $(".row2").show();
     })
-})
+});
 

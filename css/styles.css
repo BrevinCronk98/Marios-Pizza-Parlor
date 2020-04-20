@@ -6,6 +6,26 @@
 
 #display-div {
     display: none;
+    background-color: salmon;
+    border-radius: 10px;
+}
+
+#order-head {
+    font-family: monospace;
+    font-size: 25px;
+    margin-left: 25px;
+    text-decoration: underline brown;
+    font-weight: bold;
+}
+
+#reset {
+    margin-left: 25px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    background-color:darkkhaki;
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bold;
 }
 
 #slogan {
@@ -16,7 +36,10 @@ font-size: 25px;
 #title {
     font-family: monospace;
     font-size: 75px;
+    text-decoration: underline brown;
 }
+
+
 
 
 #pic {
@@ -24,6 +47,7 @@ font-size: 25px;
     width: 650px;
     float: right;
     border-radius: 18px;
+    border: solid 2px black;
 }
 
 #small {
@@ -79,6 +103,19 @@ font-size: 25px;
     font-size: 36px;
     float: right;
     
+}
+
+#pizza-disp {
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+#total-disp {
+    font-size: 18px;
+    font-family: monospace;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 body{
