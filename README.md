@@ -16,7 +16,7 @@ The site has no know bugs.
 ## Support and contact details
 If you experience any problems or have criticism email me cronkbrevin98@gmail.com
 
-## Specificatiopns
+## Specifications
 
 #### Chose Toppings
 * Exapmple Input: Pepperoni
