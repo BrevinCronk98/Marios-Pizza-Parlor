@@ -39,8 +39,32 @@ font-size: 25px;
     text-decoration: underline brown;
 }
 
+#chk-pic {
+    display: none;
+    width: 200px;
+    height: 150px;
+    border: brown 3px solid; 
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
 
+#pep-pic {
+    display: none;
+    width: 200px;
+    height: 150px;
+    border: brown 3px solid; 
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
 
+#bacon {
+    display: none;
+    width: 200px;
+    height: 150px;
+    border: brown 3px solid; 
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
 
 #pic {
     height: 200px;
