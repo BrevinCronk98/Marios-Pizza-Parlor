@@ -1,7 +1,7 @@
-function Pizza(toppings,size, total) {
+function Pizza(toppings,size, toppingsTwo) {
     this.toppings = toppings;
-    this.size = size;
-    
+    this.toppingsTwo = toppingsTwo;
+    this.size = size;   
 }
 
 
@@ -34,6 +34,17 @@ Pizza.prototype.addToppingPrice = function(){
     }
    
 }
+Pizza.prototype.addToppingTwoPrice = function(){
+    this.toppingsPrice = 0
+    if(this.toppingsTwo === "Pepperoni"){
+        return this.toppingsPrice = 2;
+    } else if(this.toppingsTwo == "Bacon"){
+        return this.toppingsPrice = 3;
+    } else{
+        return this.toppingsPrice = 4 ;
+    }
+   
+}
 
 Pizza.prototype.findTotal = function(){
     this.total = this.toppingsPrice + this.sizePrice
@@ -47,14 +58,15 @@ $(document).ready(function(){
     $("#add-btn").click(function(event){
         event.preventDefault();
         var toppings = $("#toppings").val();
+        var toppingsTwo = $("#toppingTwo").val();
         var size = $("#size").val();
-        var pizza = new Pizza(toppings, size)
+        var pizza = new Pizza(toppings, toppingsTwo, size)
         pizza.addSizePrice();
         pizza.addToppingPrice();
         pizza.findTotal()
        
         $("#display-div").show();
-        $("#pizza-disp").text(pizza.toppings  + ' ' + pizza.size)
+        $("#pizza-disp").text(pizza.toppings + ' ' + pizza.toppingsTwo  + ' ' + pizza.size)
         $("#total-disp").text(pizza.total + ' ' + "dollars")
         $(".row1").hide();
         $(".row2").hide();
