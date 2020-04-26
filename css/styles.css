@@ -96,6 +96,12 @@ font-size: 25px;
     float: right;
 }
 
+#dbl-div {
+    display: none;
+    background-color: salmon;
+    border-radius: 10px;
+}
+
 #pep {
     font-size: 18px;
     font-weight: bold;
@@ -143,15 +149,27 @@ font-size: 25px;
     font-weight: bold;
 }
 
+#pizza-disp-two {
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
 #total-disp {
     font-size: 18px;
     font-family: monospace;
     margin-bottom: 15px;
     font-weight: bold;
 }
-#double-top-div {
-    display: none;
+
+#total-disp-two {
+    font-size: 18px;
+    font-family: monospace;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
+
+
 
 body{
     background-color: brown;

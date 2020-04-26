@@ -1,7 +1,8 @@
-function Pizza(toppings,size, toppingsTwo) {
+function Pizza(toppings,toppingsTwo, size) {
     this.toppings = toppings;
     this.toppingsTwo = toppingsTwo;
-    this.size = size;   
+    this.size = size;
+
 }
 
 
@@ -35,60 +36,61 @@ Pizza.prototype.addToppingPrice = function(){
    
 }
 Pizza.prototype.addToppingTwoPrice = function(){
-    this.toppingsPrice = 0
-    if(this.toppingsTwo === "Pepperoni"){
-        return this.toppingsPrice = 2;
+    this.toppingsTwoPrice = 0
+    if(this.toppingsTwo == "Pepperoni"){
+        return this.toppingsTwoPrice = 2;
     } else if(this.toppingsTwo == "Bacon"){
-        return this.toppingsPrice = 3;
+        return this.toppingsTwoPrice = 3;
     } else{
-        return this.toppingsPrice = 4 ;
+        return this.toppingsTwoPrice = 4 ;
     }
    
 }
 
 Pizza.prototype.findTotal = function(){
-    this.total = this.toppingsPrice + this.sizePrice
+    this.total = this.toppingsPrice + this.toppingsTwoPrice + this.sizePrice
     return this.total;
 }
 
-
+Pizza.prototype.dblTopDisp = function(){
+    if(this.toppings == "Pepperoni" && this.toppingsTwo == "Pepperoni"){
+        $("#display-div").hide();
+        $("#dbl-div").show();
+        $("#pizza-disp-two").text(this.size + ' ' + "Double Pepperoni Pizza.")
+        $("#total-disp-two").text(this.total + ' ' + "Dollars, thank you for ordering with us!")
+    } else if(this.toppings == "Bacon" && this.toppingsTwo == "Bacon") {
+        $("#display-div").hide();
+        $("#dbl-div").show();
+        $("#pizza-disp-two").text(this.size + ' ' + "Double Bacon Pizza.")
+        $("#total-disp-two").text(this.total + ' ' + "Dollars, thank you for ordering with us!")
+    } else if(this.toppings == "Chicken" && this.toppingsTwo == "Chicken"){
+        $("#display-div").hide();
+        $("#dbl-div").show();
+        $("#pizza-disp-two").text(this.size + ' ' + "Double Chicken Pizza.")
+        $("#total-disp-two").text(this.total + ' ' + "Dollars, thank you for ordering with us!") 
+    }
+}
+       
 
 $(document).ready(function(){
-    var toppings = $("#toppings").val();
-    var toppingsTwo = $("#toppingTwo").val();
-    var size = $("#size").val();
-    var pizza = new Pizza(toppings, toppingsTwo, size)
     
     
-    dblToppingDisp = function () {
-        if(pizza.toppings == "Pepperoni" && pizza.toppingsTwo == "Pepperoni"){
-            $("#display-div").hide()
-            $("#double-top-div").show();
-            $("#pizza-disp-two").text(pizza.size + '' + 'Double Pepperoni Pizza')
-            $("#total-disp-two").text(pizza.total + ' ' + "Dollars")
-        } else if(pizza.toppings == "Chicken" && pizza.toppingsTwo == "Chicken"){
-            $("#display-div").hide()
-            $("#double-top-div").show();
-            $("#pizza-disp-two").text(pizza.size + '' + 'Double Chicken Pizza')
-            $("#total-disp-two").text(pizza.total + ' ' + "Dollars")
-        } else if (pizza.toppings == "Bacon" && pizza.toppingsTwo == "Bacon") {
-            $("#display-div").hide()
-            $("#double-top-div").show();
-            $("#pizza-disp-two").text(pizza.size + '' + 'Double Bacon Pizza')
-            $("#total-disp-two").text(pizza.total + ' ' + "Dollars")
-        }
-    }
-
     $("#add-btn").click(function(event){
         event.preventDefault();
-       
+        var toppings = $("#toppings").val();
+        var toppingsTwo = $("#toppingTwo").val();
+        var size = $("#size").val();
+        var pizza = new Pizza(toppings, toppingsTwo, size)
         pizza.addSizePrice();
         pizza.addToppingPrice();
+        pizza.addToppingTwoPrice();
         pizza.findTotal()
-        dblToppingDisp(toppings, toppingsTwo);
+       
+      
        
         $("#display-div").show();
-        $("#pizza-disp").text(pizza.toppings + ' ' + pizza.toppingsTwo  + ' ' + pizza.size)
+        pizza.dblTopDisp();
+        $("#pizza-disp").text(pizza.size)
         $("#total-disp").text(pizza.total + ' ' + "dollars")
         $(".row1").hide();
         $(".row2").hide();
