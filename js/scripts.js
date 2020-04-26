@@ -51,19 +51,41 @@ Pizza.prototype.findTotal = function(){
     return this.total;
 }
 
-$(document).ready(function(){
-   
 
+
+$(document).ready(function(){
+    var toppings = $("#toppings").val();
+    var toppingsTwo = $("#toppingTwo").val();
+    var size = $("#size").val();
+    var pizza = new Pizza(toppings, toppingsTwo, size)
+    
+    
+    dblToppingDisp = function () {
+        if(pizza.toppings == "Pepperoni" && pizza.toppingsTwo == "Pepperoni"){
+            $("#display-div").hide()
+            $("#double-top-div").show();
+            $("#pizza-disp-two").text(pizza.size + '' + 'Double Pepperoni Pizza')
+            $("#total-disp-two").text(pizza.total + ' ' + "Dollars")
+        } else if(pizza.toppings == "Chicken" && pizza.toppingsTwo == "Chicken"){
+            $("#display-div").hide()
+            $("#double-top-div").show();
+            $("#pizza-disp-two").text(pizza.size + '' + 'Double Chicken Pizza')
+            $("#total-disp-two").text(pizza.total + ' ' + "Dollars")
+        } else if (pizza.toppings == "Bacon" && pizza.toppingsTwo == "Bacon") {
+            $("#display-div").hide()
+            $("#double-top-div").show();
+            $("#pizza-disp-two").text(pizza.size + '' + 'Double Bacon Pizza')
+            $("#total-disp-two").text(pizza.total + ' ' + "Dollars")
+        }
+    }
 
     $("#add-btn").click(function(event){
         event.preventDefault();
-        var toppings = $("#toppings").val();
-        var toppingsTwo = $("#toppingTwo").val();
-        var size = $("#size").val();
-        var pizza = new Pizza(toppings, toppingsTwo, size)
+       
         pizza.addSizePrice();
         pizza.addToppingPrice();
         pizza.findTotal()
+        dblToppingDisp(toppings, toppingsTwo);
        
         $("#display-div").show();
         $("#pizza-disp").text(pizza.toppings + ' ' + pizza.toppingsTwo  + ' ' + pizza.size)

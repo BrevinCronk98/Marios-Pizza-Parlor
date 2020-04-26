@@ -149,6 +149,9 @@ font-size: 25px;
     margin-bottom: 15px;
     font-weight: bold;
 }
+#double-top-div {
+    display: none;
+}
 
 body{
     background-color: brown;
