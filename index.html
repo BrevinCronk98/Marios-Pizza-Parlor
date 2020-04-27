@@ -66,12 +66,13 @@
                         <h2 id="order-head">Your Order!</h2>
                         <ul id="pizza-disp"></ul>
                         <ul id="total-disp"></ul> 
-                        <button id="reset" type="button">Order?</button>
                         <img src="
                         https://www.thespruceeats.com/thmb/1YxbB1ggXlWYQuvhECbC_Uz762M=/3684x2763/smart/filters:no_upscale()/Bacon-Pizza-58ade2395f9b58a3c9d4dd49.jpg" id="bacon">
                         <img src="https://cdn.tasteatlas.com/images/dishes/b05a0af72ad845f3a6abe16143d7853a.jpg?w=600&h=450" id="pep-pic">
                         <img src="https://storcpdkenticomedia.blob.core.windows.net/media/recipemanagementsystem/media/recipe-media-files/recipes/retail/x17/20665-white-chicken-pizza-760x580.jpg?ext=.jpg" id="chk-pic">
                         <div id="pizza-list"></div>
+                        <button id="reset" type="button">Order?</button>
+                        <button id="delivery" type="button">Delivery?</button>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -79,23 +80,39 @@
                         <h2 id="order-head">Your Order!</h2>
                         <ul id="pizza-disp-two"></ul>
                         <ul id="total-disp-two"></ul> 
-                        <button id="reset-two" type="button">Order?</button>
                         <img src="
                         https://www.thespruceeats.com/thmb/1YxbB1ggXlWYQuvhECbC_Uz762M=/3684x2763/smart/filters:no_upscale()/Bacon-Pizza-58ade2395f9b58a3c9d4dd49.jpg" id="bacon-two">
                         <img src="https://cdn.tasteatlas.com/images/dishes/b05a0af72ad845f3a6abe16143d7853a.jpg?w=600&h=450" id="pep-pic-two">
                         <img src="https://storcpdkenticomedia.blob.core.windows.net/media/recipemanagementsystem/media/recipe-media-files/recipes/retail/x17/20665-white-chicken-pizza-760x580.jpg?ext=.jpg" id="chk-pic-two">
                         <div id="pizza-list-two"></div>
+                        <button id="reset-two" type="button">Order?</button>
+                        <button id="delivery-two" type="button">Delivery?</button>
                     </div>
                 </div>
             </div>
+           
+                <div class="row" id="delivery-row">
+                    <div id="delivery-column" class="col-md-4">
+                        <h3>Delivery</h3>
+                        <label for="name" id="name">Enter Your Name</label>
+                        <input type="text" name="name-input" id="name-input">
+                        <br>
+                        <label for="address" id="address-label">Enter Your Address</label>
+                        <input type="text" name="address-input" id="address-input">
+                        <button type="submit" id="delivery-submit">Order</button>
+                    </div>
+                </div>
+          
             <div id="end-row" class="row">
                 <div id="end-col" class="col-md-6">
                     <h2 id="total-header">Your Order Total:</h2>
                     <h2 id="total-price-disp"></h2>
+                    <h2 id="name-disp"></h2>
+                    <h2 id="add-disp"></h2>
+                    <h2 id="fake-time">Estimated Delivery Time : 28 minutes</h2>
                     <button type="button" id="reload-btn" onClick="window.location.reload();" >New Order?</button>
                 </div>  
-                </div>
             </div>
-           
+        </div>   
     </body>
 </html>

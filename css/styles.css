@@ -8,6 +8,7 @@
     display: none;
     background-color: salmon;
     border-radius: 10px;
+    border: 2px black solid;
 }
 
 #order-head {
@@ -59,8 +60,8 @@
 }
 
 #slogan {
-font-family: monospace;
-font-size: 25px;
+    font-family: monospace;
+    font-size: 25px;
 }
  
 #title {
@@ -154,9 +155,30 @@ font-size: 25px;
 }
 
 #double-top-div {
+    border: black 2px solid;
     display: none;
     background-color: salmon;
     border-radius: 10px;
+}
+
+#delivery{
+    margin-left: 25px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    background-color:darkkhaki;
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bold;  
+}
+
+#delivery-two {
+    margin-left: 25px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    background-color:darkkhaki;
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bold;   
 }
 
 #pep {
@@ -207,7 +229,7 @@ font-size: 25px;
 
 #reload-btn {
     margin-left: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     border-radius: 20px;
     background-color:darkkhaki;
     font-size: 18px;
@@ -219,6 +241,15 @@ font-size: 25px;
     font-size: 18px;
     font-family: monospace;
     font-weight: bold;
+}
+
+#delivery-submit {
+    margin-bottom: 15px;
+    border-radius: 20px;
+    background-color:darkkhaki;
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bold;  
 }
 
 #pizza-disp-two {
@@ -241,8 +272,31 @@ font-size: 25px;
     font-weight: bold;
 }
 
-
-
 body{
     background-color: brown;
+}
+
+#delivery-row {
+display: none;
+}
+
+#delivery-column {
+    background-color: salmon;
+}
+
+#name {
+    margin-top: 15px;
+}
+
+#delivery-column {
+    border-radius: 15px;
+    border: black 2px solid;
+}
+
+#address-input {
+    border-radius: 15px;
+}
+
+#name-input {
+    border-radius: 15px;
 }

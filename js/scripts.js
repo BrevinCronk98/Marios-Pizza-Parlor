@@ -1,4 +1,4 @@
-function Pizza(toppings,toppingsTwo, size, total) {
+function Pizza(toppings,toppingsTwo, size) {
     this.toppings = toppings;
     this.toppingsTwo = toppingsTwo;
     this.size = size;
@@ -75,6 +75,11 @@ Pizza.prototype.dblTopDisp = function(){
     }
 }
 
+function User(name, address) {
+    this.name = name
+    this.address = address
+}
+
 var pizzas = [];
 $(document).ready(function(){
     var priceAr = [];
@@ -92,6 +97,7 @@ $(document).ready(function(){
         pizza.addToppingPrice();
         pizza.addToppingTwoPrice();
         pizza.findTotal()
+       
         for(var i = 0; i< pizzas.length; i++) {
             priceAr.push(pizzas[i].total)
         }
@@ -99,8 +105,8 @@ $(document).ready(function(){
         console.log(totalPrice)
 
         pizzas.forEach((pizza) => {
-            $("#pizza-list").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} and  ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br><p id="total-price">$${totalPrice}</p>`)
-            $("#pizza-list-two").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br> <p id="total-price">$${totalPrice} Dollars</p>`)
+            $("#pizza-list").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} and  ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br><p id="total-price">$${totalPrice} Dollars</p>`)
+            $("#pizza-list-two").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} and ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br> <p id="total-price">$${totalPrice} Dollars</p>`)
         })
         
         $("#double-top-div").hide();
@@ -132,6 +138,28 @@ $(document).ready(function(){
         $(".row1").hide();
         $(".row2").hide();
         $("#top-btn-div").hide(); 
+    })
+
+    $("#delivery").click(function(event){
+        event.preventDefault();
+        $("#display-div").hide()
+        $("#double-top-div").hide();
+        $(".row1").hide();
+        $(".row2").hide();
+        $("#top-btn-div").hide(); 
+        $("#delivery-row").show();
+    })
+
+    $("#delivery-submit").click(function(event){
+        event.preventDefault();
+        var user = new User (name,address)
+        var address = $("#address-input").val();
+        var name = $("#name-input").val();
+        $("#name-disp").text(`${user.name}`)
+        $("#add-disp").text(`${user.address}`)
+        $("#end-row").show();
+
+
     })
 });
 
