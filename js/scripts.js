@@ -75,10 +75,6 @@ Pizza.prototype.dblTopDisp = function(){
     }
 }
 
-function User(name, address) {
-    this.name = name
-    this.address = address
-}
 
 var pizzas = [];
 $(document).ready(function(){
@@ -127,6 +123,7 @@ $(document).ready(function(){
         $(".row1").hide();
         $(".row2").hide();
         $("#top-btn-div").hide(); 
+        $("#fake-time").hide()
     })
     
     $("#reset-two").click(function(event){
@@ -138,6 +135,7 @@ $(document).ready(function(){
         $(".row1").hide();
         $(".row2").hide();
         $("#top-btn-div").hide(); 
+        $("#fake-time").hide()
     })
 
     $("#delivery").click(function(event){
@@ -150,16 +148,25 @@ $(document).ready(function(){
         $("#delivery-row").show();
     })
 
+    $("#delivery-two").click(function(event){
+        event.preventDefault();
+        $("#display-div").hide()
+        $("#double-top-div").hide();
+        $(".row1").hide();
+        $(".row2").hide();
+        $("#top-btn-div").hide(); 
+        $("#delivery-row").show();
+    })
+
     $("#delivery-submit").click(function(event){
         event.preventDefault();
-        var user = new User (name,address)
         var address = $("#address-input").val();
         var name = $("#name-input").val();
-        $("#name-disp").text(`${user.name}`)
-        $("#add-disp").text(`${user.address}`)
+        $("#name-disp").text('Your Name:' + ' ' + name)
+        $("#add-disp").text(' Your Address:' + ' ' + address)
+        $("#total-price-disp").text('$' + ' ' + totalPrice + ' ' + 'Dollars')
         $("#end-row").show();
-
-
+        $("#fake-time").show();
     })
 });
 
