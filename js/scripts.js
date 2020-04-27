@@ -101,8 +101,27 @@ $(document).ready(function(){
         console.log(totalPrice)
 
         pizzas.forEach((pizza) => {
-            $("#pizza-list").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} and  ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br><p id="total-price">$${totalPrice} Dollars</p>`)
-            $("#pizza-list-two").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} and ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br> <p id="total-price">$${totalPrice} Dollars</p>`)
+            if(pizza.toppings == "Pepperoni" && pizza.toppingsTwo == "Pepperoni"){
+                $("#pizza-list").append(`<li id="listitem"> ${pizza.size}  Double Pepperoni Pizza $${pizza.findTotal()}</li> <br>`)
+                $("#pizza-list-two").append(`<li id="listitem"> ${pizza.size} Double Pepperoni Pizza $${pizza.findTotal()}</li> <br>`) 
+                $("#price-tag").text(`$${totalPrice} Dollars`)
+                $("#price-tag-two").text(`$${totalPrice} Dollars`)
+            } else if(pizza.toppings == "Bacon" && pizza.toppingsTwo == "Bacon") {
+                $("#pizza-list").append(`<li id="listitem"> ${pizza.size}  Double Bacon Pizza $${pizza.findTotal()}</li> <br>`)
+                $("#pizza-list-two").append(`<li id="listitem"> ${pizza.size}  Double Bacon Pizza $${pizza.findTotal()}</li> <br>`) 
+                $("#price-tag").text(`$${totalPrice} Dollars`)
+                $("#price-tag-two").text(`$${totalPrice} Dollars`)
+            } else if(pizza.toppings == "Chicken" && pizza.toppingsTwo == "Chicken") {
+                $("#pizza-list").append(`<li id="listitem"> ${pizza.size}  Double Chicken Pizza $${pizza.findTotal()}</li> <br>`)
+                $("#pizza-list-two").append(`<li id="listitem"> ${pizza.size} Double Chicken Pizza $${pizza.findTotal()}</li> <br>`) 
+                $("#price-tag").text(`$${totalPrice} Dollars`)
+                $("#price-tag-two").text(`$${totalPrice} Dollars`)
+            } else {
+                $("#pizza-list").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} and  ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br>`)
+                $("#pizza-list-two").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} and ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br>`) 
+                $("#price-tag").text(`$${totalPrice} Dollars`)
+                $("#price-tag-two").text(`$${totalPrice} Dollars`)
+            }
         })
         
         $("#double-top-div").hide();

@@ -2,6 +2,7 @@
     background-color: darksalmon;
     margin-top: 50px;
     border-radius: 25px;
+    border: 2px black solid ;
 }
 
 #display-div {
