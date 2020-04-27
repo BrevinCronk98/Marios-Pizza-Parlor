@@ -28,6 +28,20 @@
     font-weight: bold;
 }
 
+#listitem {
+    font-size: 18px;
+}
+
+#reset-two {
+    margin-left: 25px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    background-color:darkkhaki;
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
 #slogan {
 font-family: monospace;
 font-size: 25px;
@@ -58,6 +72,33 @@ font-size: 25px;
 }
 
 #bacon {
+    display: none;
+    width: 200px;
+    height: 150px;
+    border: brown 3px solid; 
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+#pep-pic-two {
+    display: none;
+    width: 200px;
+    height: 150px;
+    border: brown 3px solid; 
+    border-radius: 15px;
+    margin-bottom: 10px; 
+}
+
+#chk-pic-two {
+    display: none;
+    width: 200px;
+    height: 150px;
+    border: brown 3px solid; 
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+#bacon-two {
     display: none;
     width: 200px;
     height: 150px;
