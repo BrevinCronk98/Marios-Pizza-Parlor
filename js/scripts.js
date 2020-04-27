@@ -9,7 +9,7 @@ Pizza.prototype.addSizePrice = function(){
     this.sizePrice = 0;
     if(this.size === "12 Inch"){
         return this.sizePrice = 12;
-    } else{
+    } else {
         return this.sizePrice = 15;
     }
 }
@@ -26,7 +26,7 @@ Pizza.prototype.addToppingPrice = function(){
         $("#pep-pic").hide();
         $("#chk-pic").hide();
         return this.toppingsPrice = 3;
-    } else{
+    } else {
         $("#chk-pic").show();
         $("#bacon").hide();
         $("#pep-pic").hide();
@@ -81,7 +81,6 @@ Pizza.prototype.dblTopDisp = function(){
     }
 }
 
-
 var pizzas = [];
 $(document).ready(function(){
     var priceAr = [];
@@ -97,35 +96,34 @@ $(document).ready(function(){
         pizza.addSizePrice();
         pizza.addToppingPrice();
         pizza.addToppingTwoPrice();
-        pizza.findTotal()
+        pizza.findTotal();
        
         for(var i = 0; i< pizzas.length; i++) {
-            priceAr.push(pizzas[i].total)
+            priceAr.push(pizzas[i].total);
         }
         priceAr.forEach(total => totalPrice += total )
-        console.log(totalPrice)
 
         pizzas.forEach((pizza) => {
             if(pizza.toppings == "Pepperoni" && pizza.toppingsTwo == "Pepperoni"){
-                $("#pizza-list").append(`<li id="listitem"> ${pizza.size}  Double Pepperoni Pizza, $${pizza.findTotal()}</li> <br>`)
-                $("#pizza-list-two").append(`<li id="listitem"> ${pizza.size} Double Pepperoni Pizza, $${pizza.findTotal()}</li> <br>`) 
-                $("#price-tag").text(`Total on Order $${totalPrice} Dollars`)
-                $("#price-tag-two").text(`Total on Order $${totalPrice} Dollars`)
+                $("#pizza-list").append(`<li id="listitem"> ${pizza.size}  Double Pepperoni Pizza, $${pizza.findTotal()}</li> <br>`);
+                $("#pizza-list-two").append(`<li id="listitem"> ${pizza.size} Double Pepperoni Pizza, $${pizza.findTotal()}</li> <br>`);
+                $("#price-tag").text(`Total on Order $${totalPrice} Dollars`);
+                $("#price-tag-two").text(`Total on Order $${totalPrice} Dollars`);
             } else if(pizza.toppings == "Bacon" && pizza.toppingsTwo == "Bacon") {
-                $("#pizza-list").append(`<li id="listitem"> ${pizza.size}  Double Bacon Pizza, $${pizza.findTotal()}</li> <br>`)
-                $("#pizza-list-two").append(`<li id="listitem"> ${pizza.size}  Double Bacon Pizza, $${pizza.findTotal()}</li> <br>`) 
-                $("#price-tag").text(`Total on Order $${totalPrice} Dollars`)
-                $("#price-tag-two").text(`Total on Order $${totalPrice} Dollars`)
+                $("#pizza-list").append(`<li id="listitem"> ${pizza.size}  Double Bacon Pizza, $${pizza.findTotal()}</li> <br>`);
+                $("#pizza-list-two").append(`<li id="listitem"> ${pizza.size}  Double Bacon Pizza, $${pizza.findTotal()}</li> <br>`) ;
+                $("#price-tag").text(`Total on Order $${totalPrice} Dollars`);
+                $("#price-tag-two").text(`Total on Order $${totalPrice} Dollars`);
             } else if(pizza.toppings == "Chicken" && pizza.toppingsTwo == "Chicken") {
-                $("#pizza-list").append(`<li id="listitem"> ${pizza.size}  Double Chicken Pizza, $${pizza.findTotal()}</li> <br>`)
-                $("#pizza-list-two").append(`<li id="listitem"> ${pizza.size} Double Chicken Pizza, $${pizza.findTotal()}</li> <br>`) 
-                $("#price-tag").text(`Total on Order $${totalPrice} Dollars`)
-                $("#price-tag-two").text(`Total on Order $${totalPrice} Dollars`)
+                $("#pizza-list").append(`<li id="listitem"> ${pizza.size}  Double Chicken Pizza, $${pizza.findTotal()}</li> <br>`);
+                $("#pizza-list-two").append(`<li id="listitem"> ${pizza.size} Double Chicken Pizza, $${pizza.findTotal()}</li> <br>`) ;
+                $("#price-tag").text(`Total on Order $${totalPrice} Dollars`);
+                $("#price-tag-two").text(`Total on Order $${totalPrice} Dollars`);
             } else {
-                $("#pizza-list").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} with  ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br>`)
-                $("#pizza-list-two").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} with ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br>`) 
-                $("#price-tag").text(`Total on Order $${totalPrice} Dollars`)
-                $("#price-tag-two").text(`Total on Order $${totalPrice} Dollars`)
+                $("#pizza-list").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} with  ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br>`);
+                $("#pizza-list-two").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} with ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br>`);
+                $("#price-tag").text(`Total on Order $${totalPrice} Dollars`);
+                $("#price-tag-two").text(`Total on Order $${totalPrice} Dollars`);
             }
         });
         
@@ -135,7 +133,7 @@ $(document).ready(function(){
         $("#pizza-disp").text(pizza.size + ' ' + toppings + ' ' + 'with' + ' ' + toppingsTwo)
         $("#total-disp").text('$'+ pizza.total + ' ' + "dollars")
         pizzas = [];
-        priceAr= []
+        priceAr= [];
     });
 
     $("#reset").click(function(event){
@@ -147,24 +145,24 @@ $(document).ready(function(){
         $(".row1").hide();
         $(".row2").hide();
         $("#top-btn-div").hide(); 
-        $("#fake-time").hide()
+        $("#fake-time").hide();
     });
     
     $("#reset-two").click(function(event){
         event.preventDefault();
         $("#end-row").show();
         $("#total-price-disp").text('$' + ' ' + totalPrice + ' ' + 'Dollars')
-        $("#display-div").hide()
+        $("#display-div").hide();
         $("#double-top-div").hide();
         $(".row1").hide();
         $(".row2").hide();
         $("#top-btn-div").hide(); 
-        $("#fake-time").hide()
+        $("#fake-time").hide();
     });
 
     $("#delivery").click(function(event){
         event.preventDefault();
-        $("#display-div").hide()
+        $("#display-div").hide();
         $("#double-top-div").hide();
         $(".row1").hide();
         $(".row2").hide();
@@ -174,7 +172,7 @@ $(document).ready(function(){
 
     $("#delivery-two").click(function(event){
         event.preventDefault();
-        $("#display-div").hide()
+        $("#display-div").hide();
         $("#double-top-div").hide();
         $(".row1").hide();
         $(".row2").hide();
@@ -186,9 +184,9 @@ $(document).ready(function(){
         event.preventDefault();
         var address = $("#address-input").val();
         var name = $("#name-input").val();
-        $("#name-disp").text('Your Name:' + ' ' + name)
-        $("#add-disp").text(' Your Address:' + ' ' + address)
-        $("#total-price-disp").text('$' + ' ' + totalPrice + ' ' + 'Dollars')
+        $("#name-disp").text('Your Name:' + ' ' + name);
+        $("#add-disp").text(' Your Address:' + ' ' + address);
+        $("#total-price-disp").text('$' + ' ' + totalPrice + ' ' + 'Dollars');
         $("#end-row").show();
         $("#fake-time").show();
     });

@@ -5,7 +5,7 @@
 #### By Brevin Cronk
 
 ## Description
-On this website you are able to order a pizza. Depending on the size and toppings on your pizza the price will vary.
+On this website you are able to order a pizza. Depending on the size and toppings on your pizza the price will vary. Your pizzas will be stored in a list and you will see them appear as you add more pizzas to it. At the end it will give the user the option to do in-store pickup, or do delivery. If the user chooses to do delivery they will be prompted to enter their name and their address.
 
 ## Setup/Installation Requirements
  You can clone my repository and open the website for yourself or you can go to my GH-pages: https://brevincronk98.github.io/Marios-Pizza-Parlor/.
