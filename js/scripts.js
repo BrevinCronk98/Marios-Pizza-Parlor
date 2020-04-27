@@ -1,8 +1,7 @@
-function Pizza(toppings,toppingsTwo, size) {
+function Pizza(toppings,toppingsTwo, size, total) {
     this.toppings = toppings;
     this.toppingsTwo = toppingsTwo;
     this.size = size;
-
 }
 
 
@@ -85,27 +84,36 @@ $(document).ready(function(){
         var toppings = $("#toppings").val();
         var toppingsTwo = $("#toppingTwo").val();
         var size = $("#size").val();
-       
         var pizza = new Pizza(toppings, toppingsTwo, size)
         pizzas.push(pizza);
-       
-
-        pizzas.forEach((pizza) => {
-            $("#pizza-list").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} ${pizza.toppingsTwo}</li>`)
-        })
-        
-        
         pizza.addSizePrice();
         pizza.addToppingPrice();
         pizza.addToppingTwoPrice();
         pizza.findTotal()
+        for(var i = 0; i< pizzas.length; i++) {
+            priceAr.push(pizzas[i].total)
+        }
+        priceAr.forEach(total => totalPrice += total )
+        console.log(totalPrice)
+
+        pizzas.forEach((pizza) => {
+            $("#pizza-list").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} and  ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br> ${totalPrice}`)
+            $("#pizza-list-two").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} ${pizza.toppingsTwo} $${pizza.findTotal()}</li><br> ${totalPrice}`)
+        })
+        
+        
+     
+       
+       
        
       
-       
+        $("#dbl-div").hide();
         $("#display-div").show();
-        // pizza.dblTopDisp();
-        // $("#pizza-disp").text(pizza.size + ' ' + toppings + ' ' + 'and' + ' ' + toppingsTwo + ' ' + 'Pizza')
-        // $("#total-disp").text(pizza.total + ' ' + "dollars")
+        pizza.dblTopDisp();
+        $("#pizza-disp").text(pizza.size + ' ' + toppings + ' ' + 'and' + ' ' + toppingsTwo + ' ' + 'Pizza')
+        $("#total-disp").text(pizza.total + ' ' + "dollars")
+        pizzas = [];
+        priceAr= []
     });
 
     $("#reset").click(function(event){
