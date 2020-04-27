@@ -89,7 +89,6 @@ $(document).ready(function(){
     
     $("#add-btn").click(function(event){
         event.preventDefault();
-        
         var toppings = $("#toppings").val();
         var toppingsTwo = $("#toppingTwo").val();
         var size = $("#size").val();

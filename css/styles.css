@@ -43,6 +43,7 @@
 #listitem {
     font-size: 18px;
     margin-left: 15px;
+    display: show;
 }
 
 #total-price {
