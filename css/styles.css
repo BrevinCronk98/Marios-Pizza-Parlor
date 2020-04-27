@@ -30,6 +30,12 @@
 
 #listitem {
     font-size: 18px;
+    margin-left: 15px;
+}
+
+#total-price {
+    font-size: 20px;
+    margin-left: 15px;
 }
 
 #reset-two {
@@ -40,6 +46,16 @@
     font-size: 18px;
     font-family: monospace;
     font-weight: bold;
+}
+
+#end-row {
+    display: none;
+}
+
+#end-col {
+    background-color: salmon;
+    border-radius: 15px;
+    border: black solid 2px;
 }
 
 #slogan {
@@ -137,7 +153,7 @@ font-size: 25px;
     float: right;
 }
 
-#dbl-div {
+#double-top-div {
     display: none;
     background-color: salmon;
     border-radius: 10px;
@@ -154,6 +170,11 @@ font-size: 25px;
 }
 
 #chk {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#nun {
     font-size: 18px;
     font-weight: bold;
 }
@@ -182,6 +203,16 @@ font-size: 25px;
     font-size: 36px;
     float: right;
     
+}
+
+#reload-btn {
+    margin-left: 25px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    background-color:darkkhaki;
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bold;  
 }
 
 #pizza-disp {

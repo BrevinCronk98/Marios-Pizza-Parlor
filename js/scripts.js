@@ -56,20 +56,22 @@ Pizza.prototype.findTotal = function(){
 Pizza.prototype.dblTopDisp = function(){
     if(this.toppings == "Pepperoni" && this.toppingsTwo == "Pepperoni"){
         $("#display-div").hide();
-        $("#dbl-div").show();
+        $("#double-top-div").show();
         $("#pizza-disp-two").text(this.size + ' ' + "Double Pepperoni Pizza.")
         $("#total-disp-two").text(this.total + ' ' + "Dollars, thank you for ordering with us!")
         $("#pep-pic-two").show();
     } else if(this.toppings == "Bacon" && this.toppingsTwo == "Bacon") {
         $("#display-div").hide();
-        $("#dbl-div").show();
+        $("#double-top-div").show();
         $("#pizza-disp-two").text(this.size + ' ' + "Double Bacon Pizza.")
         $("#total-disp-two").text(this.total + ' ' + "Dollars, thank you for ordering with us!")
+        $("#bacon").show();
     } else if(this.toppings == "Chicken" && this.toppingsTwo == "Chicken"){
         $("#display-div").hide();
-        $("#dbl-div").show();
+        $("#double-top-div").show();
         $("#pizza-disp-two").text(this.size + ' ' + "Double Chicken Pizza.")
         $("#total-disp-two").text(this.total + ' ' + "Dollars, thank you for ordering with us!") 
+        $("#chk-pic").show();
     }
 }
 
@@ -97,20 +99,14 @@ $(document).ready(function(){
         console.log(totalPrice)
 
         pizzas.forEach((pizza) => {
-            $("#pizza-list").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} and  ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br> ${totalPrice}`)
-            $("#pizza-list-two").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} ${pizza.toppingsTwo} $${pizza.findTotal()}</li><br> ${totalPrice}`)
+            $("#pizza-list").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} and  ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br><p id="total-price">$${totalPrice}</p>`)
+            $("#pizza-list-two").append(`<li id="listitem">  ${pizza.size} ${pizza.toppings} ${pizza.toppingsTwo} $${pizza.findTotal()}</li> <br> <p id="total-price">$${totalPrice} Dollars</p>`)
         })
         
-        
-     
-       
-       
-       
-      
-        $("#dbl-div").hide();
+        $("#double-top-div").hide();
         $("#display-div").show();
         pizza.dblTopDisp();
-        $("#pizza-disp").text(pizza.size + ' ' + toppings + ' ' + 'and' + ' ' + toppingsTwo + ' ' + 'Pizza')
+        $("#pizza-disp").text(pizza.size + ' ' + toppings + ' ' + 'with' + ' ' + toppingsTwo)
         $("#total-disp").text(pizza.total + ' ' + "dollars")
         pizzas = [];
         priceAr= []
@@ -118,18 +114,24 @@ $(document).ready(function(){
 
     $("#reset").click(function(event){
         event.preventDefault();
+        $("#end-row").show();
+        $("#total-price-disp").text('$' + ' ' + totalPrice + ' ' + 'Dollars')
         $("#display-div").hide()
-        $(".row1").show();
-        $(".row2").show();
-        $("#top-btn-div").show();
+        $("#double-top-div").hide();
+        $(".row1").hide();
+        $(".row2").hide();
+        $("#top-btn-div").hide(); 
     })
-
+    
     $("#reset-two").click(function(event){
         event.preventDefault();
-        $("#dbl-div").hide();
-        $(".row1").show();
-        $(".row2").show();
-        $("#top-btn-div").show();
+        $("#end-row").show();
+        $("#total-price-disp").text('$' + ' ' + totalPrice + ' ' + 'Dollars')
+        $("#display-div").hide()
+        $("#double-top-div").hide();
+        $(".row1").hide();
+        $(".row2").hide();
+        $("#top-btn-div").hide(); 
     })
 });
 

@@ -28,7 +28,7 @@
                         </select>
                     </div>
                 </div>
-                </div>
+            </div>
                 <div id="top-btn-div">
                     <div class="col-md-4">
                         <div id="top-buttons">
@@ -45,13 +45,12 @@
                                 <option id="pep" value="Pepperoni">Pepperoni</option>
                                 <option id="bac"value="Bacon">Bacon</option>
                                 <option id="chk" value="Chicken">Chicken</option>
-                                <option id="nun" value="">No Second</option>
+                                <option id="nun" value="no other toppings.">No Second</option>
                             </select>
                         </div>
                     </div>      
                 </div>
             </div> 
-        </div>
             <br>
             <div class="container">
                 <div class="row2">
@@ -67,7 +66,7 @@
                         <h2 id="order-head">Your Order!</h2>
                         <ul id="pizza-disp"></ul>
                         <ul id="total-disp"></ul> 
-                        <button id="reset" type="button">New Order?</button>
+                        <button id="reset" type="button">Order?</button>
                         <img src="
                         https://www.thespruceeats.com/thmb/1YxbB1ggXlWYQuvhECbC_Uz762M=/3684x2763/smart/filters:no_upscale()/Bacon-Pizza-58ade2395f9b58a3c9d4dd49.jpg" id="bacon">
                         <img src="https://cdn.tasteatlas.com/images/dishes/b05a0af72ad845f3a6abe16143d7853a.jpg?w=600&h=450" id="pep-pic">
@@ -76,11 +75,11 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div id="dbl-div">
+                    <div id="double-top-div">
                         <h2 id="order-head">Your Order!</h2>
                         <ul id="pizza-disp-two"></ul>
                         <ul id="total-disp-two"></ul> 
-                        <button id="reset-two" type="button">New Order?</button>
+                        <button id="reset-two" type="button">Order?</button>
                         <img src="
                         https://www.thespruceeats.com/thmb/1YxbB1ggXlWYQuvhECbC_Uz762M=/3684x2763/smart/filters:no_upscale()/Bacon-Pizza-58ade2395f9b58a3c9d4dd49.jpg" id="bacon-two">
                         <img src="https://cdn.tasteatlas.com/images/dishes/b05a0af72ad845f3a6abe16143d7853a.jpg?w=600&h=450" id="pep-pic-two">
@@ -89,6 +88,14 @@
                     </div>
                 </div>
             </div>
-        </div>  
+            <div id="end-row" class="row">
+                <div id="end-col" class="col-md-6">
+                    <h2 id="total-header">Your Order Total:</h2>
+                    <h2 id="total-price-disp"></h2>
+                    <button type="button" id="reload-btn" onClick="window.location.reload();" >New Order?</button>
+                </div>  
+                </div>
+            </div>
+           
     </body>
 </html>
