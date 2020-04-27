@@ -20,6 +20,16 @@
     font-weight: bold;
 }
 
+#back-btn {
+    margin-left: 25px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    background-color:darkkhaki;
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
 #reset {
     margin-left: 25px;
     margin-bottom: 25px;
@@ -313,10 +323,14 @@ display: none;
 
 #price-tag {
     margin-left: 25px;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 #price-tag-two {
     margin-left: 25px;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 #pizza-list {
