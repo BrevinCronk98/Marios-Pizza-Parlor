@@ -78,6 +78,7 @@
     border: brown 3px solid; 
     border-radius: 15px;
     margin-bottom: 10px;
+    margin-left: 50px;
 }
 
 #pep-pic {
@@ -87,6 +88,7 @@
     border: brown 3px solid; 
     border-radius: 15px;
     margin-bottom: 10px;
+    margin-left: 50px;
 }
 
 #bacon {
@@ -96,6 +98,7 @@
     border: brown 3px solid; 
     border-radius: 15px;
     margin-bottom: 10px;
+    margin-left: 50px;
 }
 
 #pep-pic-two {
@@ -105,6 +108,7 @@
     border: brown 3px solid; 
     border-radius: 15px;
     margin-bottom: 10px; 
+    margin-left: 50px;
 }
 
 #chk-pic-two {
@@ -114,6 +118,7 @@
     border: brown 3px solid; 
     border-radius: 15px;
     margin-bottom: 10px;
+    margin-left: 50px;
 }
 
 #bacon-two {
@@ -123,6 +128,7 @@
     border: brown 3px solid; 
     border-radius: 15px;
     margin-bottom: 10px;
+    margin-left: 50px;
 }
 
 #pic {
@@ -225,7 +231,6 @@
     border-radius: 25px;
     font-size: 36px;
     float: right;
-    
 }
 
 #reload-btn {
@@ -273,7 +278,7 @@
     font-weight: bold;
 }
 
-body{
+body {
     background-color: brown;
 }
 
@@ -300,4 +305,26 @@ display: none;
 
 #name-input {
     border-radius: 15px;
+}
+
+#bottom-row {
+    background-color: darksalmon;
+}
+
+#price-tag {
+    margin-left: 25px;
+}
+
+#price-tag-two {
+    margin-left: 25px;
+}
+
+#pizza-list {
+    font-weight: bold;
+    list-style-type: none;
+}
+
+#pizza-list-two {
+    font-weight: bold;
+    list-style-type: none;
 }

@@ -11,10 +11,10 @@ On this website you are able to order a pizza. Depending on the size and topping
  You can clone my repository and open the website for yourself or you can go to my GH-pages: https://brevincronk98.github.io/Marios-Pizza-Parlor/.
 
 ## Known Bugs
-At one point I clicked order no picture appeared. I havent been able to repeat the bug but it may still be out there.
+So far I have not been able to locate any bugs, but if you do locate any, feel free to contact me.
 
 ## Support and contact details
-If you experience any problems or have criticism email me cronkbrevin98@gmail.com
+If you experience any problems or have criticism email me cronkbrevin98@gmail.com.
 
 ## Specifications
 
@@ -27,7 +27,7 @@ If you experience any problems or have criticism email me cronkbrevin98@gmail.co
 #### Able to Order Pizzas to Be Delivered
 * Example Input : Address: "435 st nw"
 * Example Output "Your order total: $35 Address: 435 st nw Estimated Delivery Time :28 minutes.
-#### User Can order Multiple Pizzas 
+#### User Can Order Multiple Pizzas 
 * Example Input: 2 12 inch double pepperoni pizzas
 * Example Output: The 2 double pepperoni pizzas will be displayed in a list.
 ## Technologies Used
